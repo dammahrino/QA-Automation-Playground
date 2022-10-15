@@ -12,6 +12,7 @@
   "author": "Daniel Cadena",
   "license": "ISC",
   "dependencies": {
+    "@playwright/test": "^1.27.1",
     "prettier": "^2.7.1"
   }
 }
