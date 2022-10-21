@@ -34,3 +34,11 @@ test.skip('Selectors', async ({ page }) => {
   // XPath
   await page.click('//button')
 })
+
+test('Working with Inputs', async ({page}) => {
+  await page.goto('http://zero.webappsecurity.com/index.html')
+  await page.click('#signin_button')
+
+  await page.type('#user_login', 'some username')
+  await page.type('#user_password', 'some password')
+})
