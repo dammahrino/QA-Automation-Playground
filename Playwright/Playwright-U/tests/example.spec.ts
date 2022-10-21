@@ -35,7 +35,7 @@ test.skip('Selectors', async ({ page }) => {
   await page.click('//button')
 })
 
-test('Working with Inputs', async ({ page }) => {
+test('Working with Inputs @myTag', async ({ page }) => {
   await page.goto('http://zero.webappsecurity.com/index.html')
   await page.click('#signin_button')
 
@@ -47,7 +47,7 @@ test('Working with Inputs', async ({ page }) => {
   await expect(errorMessage).toContainText('Login and/or password are wrong.')
 })
 
-test('Assertions', async ({ page }) => {
+test('Assertions @myTag', async ({ page }) => {
   await page.goto('https://example.com')
   // Good for redirects
   await expect(page).toHaveURL('https://example.com')
@@ -71,7 +71,9 @@ test('Annotations useful for Playwright', async ({page}) => {
   /**
    * There are a couple of useful annotations in Playwright
    * 
-   * test.skip()  -   Ignores the test in the execution
-   * test.only()  -   Specifies which test should be only run
+   * test.skip()      -   Ignores the test in the execution
+   * test.only()      -   Specifies which test should be only run, multiple tests can be marked with only
+   * test.describe()  -   Useful for creating test suites, grouping tests.
+   * 
    */
 })
