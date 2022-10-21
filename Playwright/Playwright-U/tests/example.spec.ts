@@ -66,3 +66,12 @@ test('Assertions', async ({ page }) => {
 
   await expect(nonExistingElement).not.toBeVisible()
 })
+
+test('Annotations useful for Playwright', async ({page}) => {
+  /**
+   * There are a couple of useful annotations in Playwright
+   * 
+   * test.skip()  -   Ignores the test in the execution
+   * test.only()  -   Specifies which test should be only run
+   */
+})
